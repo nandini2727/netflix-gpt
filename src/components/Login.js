@@ -3,9 +3,15 @@ import Header from './Header'
 import { checkValidate } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase"
+<<<<<<< HEAD
 import {useDispatch} from "react-redux"
 import {addUser} from "../utils/userSlice"
 import { USER_LOGO,BG_URL } from '../utils/constants';
+=======
+import { useNavigate } from 'react-router-dom';
+import {useDispatch} from "react-redux"
+import {addUser} from "../utils/userSlice"
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
 
 const Login = () => {
     const [isSignIn,setIsSignIn]=useState(true);
@@ -14,7 +20,11 @@ const Login = () => {
     const email=useRef("");
     const password=useRef("");
     const name=useRef("")
+<<<<<<< HEAD
   
+=======
+    const navigate=useNavigate();
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
 
     const handleButtonClick=()=>{
         const message=checkValidate(email.current.value,password.current.value,name.current.value);
@@ -24,7 +34,14 @@ const Login = () => {
           signInWithEmailAndPassword(auth, email.current.value,password.current.value)
           .then((userCredential) => {
             // Signed in 
+<<<<<<< HEAD
             
+=======
+            const user = userCredential.user;
+            
+            navigate("/browser");
+            console.log(user);
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
 
           })
           .catch((error) => {
@@ -39,7 +56,11 @@ const Login = () => {
             const user = userCredential.user;
              updateProfile(user, {
               displayName: name.current.value,
+<<<<<<< HEAD
               photoURL: USER_LOGO,
+=======
+              photoURL: "https://avatars.githubusercontent.com/u/12824231?v=4",
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
              })
               .then(() => {
                 const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -51,6 +72,10 @@ const Login = () => {
                     photoURL: photoURL,
                   })
                 );
+<<<<<<< HEAD
+=======
+                navigate("/browser");
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
               })
               .catch((error) => {
                 setIsErrorMsg(error.message);
@@ -73,10 +98,19 @@ const Login = () => {
     <div className=''>
       <Header/>
       <div className='bg-black absolute'>
+<<<<<<< HEAD
       <img className="h-screen object-cover" src={BG_URL} alt="logo" />
       </div>
       {/* <div className="flex flex-col items-center justify-center h-screen bg-login-screen"> */}
         <form onSubmit={(e)=>e.preventDefault()} className='bg-[rbga(0,0,0,0.1)] w-full md:w-3/12 top-32 mx-auto right-0 left-0 relative flex flex-col items-center gap-5 justify-start  bg-[rgba(0,0,0,0.8)] py-10'>
+=======
+      <img src="https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/IN-en-20241111-TRIFECTA-perspective_149877ab-fcbd-4e4f-a885-8d6174a1ee81_large.jpg" alt='logo'
+         className='opacity-50'>
+        </img>   
+      </div>
+      {/* <div className="flex flex-col items-center justify-center h-screen bg-login-screen"> */}
+        <form onSubmit={(e)=>e.preventDefault()} className='bg-[rbga(0,0,0,0.1)] w-[28%] top-32 mx-auto right-0 left-0 relative flex flex-col items-center gap-5 justify-start  bg-[rgba(0,0,0,0.8)] py-10'>
+>>>>>>> e7f9588 (firebase integration and signin & signout added)
                 <h1 className='text-white text-[2rem] font-bold text-left w-9/12 '>{isSignIn ? "Sign In":"Sign Up"}</h1>
 
                 {  !isSignIn && 
