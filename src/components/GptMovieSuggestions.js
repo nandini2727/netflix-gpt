@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList"
 const GptMovieSuggestions = () => {
@@ -9,5 +10,9 @@ const GptMovieSuggestions = () => {
         <h1 className="text-3xl  text-white ml-8 ">Showing Search Results for "{searchItem}"</h1>
         <MovieList movies={movieNames} />
     </div>);
+=======
+const GptMovieSuggestions = () => {
+    return <div>GptMovieSuggestions</div>;
+>>>>>>> 97c48da (Added GPT search page & language change functionality)
   };
   export default GptMovieSuggestions;
