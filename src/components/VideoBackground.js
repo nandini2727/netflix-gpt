@@ -12,7 +12,11 @@ const VideoBackground = ({ movieId }) => {
           trailerVideo?.key +
           "?&autoplay=1&mute=1&loop=1&playlist="+trailerVideo?.key
         }
+<<<<<<< HEAD
         title="YouTube video player"
+=======
+        // title="YouTube video player"
+>>>>>>> 9ade620 (Completed the browse page)
         // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
     </div>

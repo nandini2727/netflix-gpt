@@ -6,6 +6,7 @@ export const API_OPTIONS= {
     method: 'GET',
     headers: {
       accept: 'application/json',
+<<<<<<< HEAD
       Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY
     }
   };
@@ -19,3 +20,10 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 export const FIREBASE_API_KEY=process.env.REACT_APP_FIREBASE_KEY;
+=======
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2Zjg0NmJkMGYzMzllOTgzNzM2YjI5Y2JjYjU2YjgzYSIsIm5iZiI6MTczMzY1NDA0Mi4wOTMsInN1YiI6IjY3NTU3NjFhZDQyOGNhMWM1ZDYyZDVjYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uyfC3ixX9SDczp2nNwhj_yv4HUTlaYT5SoNVuXCxDr4'
+    }
+  };
+
+  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+>>>>>>> 9ade620 (Completed the browse page)

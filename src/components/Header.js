@@ -6,18 +6,25 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/userSlice";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LOGO_URL, SUPPORTED_LANGUAGES } from '../utils/constants';
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 =======
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+import { LOGO_URL } from '../utils/constants';
+>>>>>>> 9ade620 (Completed the browse page)
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+=======
+>>>>>>> 9ade620 (Completed the browse page)
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -38,6 +45,7 @@ const Header = () => {
       return ()=> unsubscribe();
     });
   }, []);
+<<<<<<< HEAD
 
   const handleGptSearchClick = () => {
     // Toggle GPT Search
@@ -59,6 +67,12 @@ const Header = () => {
         navigate("/");
       })
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(() => {})
+>>>>>>> 9ade620 (Completed the browse page)
       .catch((error) => {
         navigate("/error");
       });
@@ -97,7 +111,7 @@ const Header = () => {
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       <img
         className="w-44"
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+        src= {LOGO_URL} 
         alt="logo"
       />
       {user && (
@@ -110,10 +124,13 @@ const Header = () => {
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* <img src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' alt="Neflix_Logo" className='w-40'>
       </img> */}
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+>>>>>>> 9ade620 (Completed the browse page)
     </div>
   )
 }

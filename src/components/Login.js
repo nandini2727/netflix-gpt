@@ -4,6 +4,7 @@ import { checkValidate } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase"
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useDispatch} from "react-redux"
 import {addUser} from "../utils/userSlice"
 import { USER_LOGO,BG_URL } from '../utils/constants';
@@ -12,6 +13,11 @@ import { useNavigate } from 'react-router-dom';
 import {useDispatch} from "react-redux"
 import {addUser} from "../utils/userSlice"
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+import {useDispatch} from "react-redux"
+import {addUser} from "../utils/userSlice"
+import { USER_LOGO } from '../utils/constants';
+>>>>>>> 9ade620 (Completed the browse page)
 
 const Login = () => {
     const [isSignIn,setIsSignIn]=useState(true);
@@ -21,10 +27,14 @@ const Login = () => {
     const password=useRef("");
     const name=useRef("")
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
     const navigate=useNavigate();
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+  
+>>>>>>> 9ade620 (Completed the browse page)
 
     const handleButtonClick=()=>{
         const message=checkValidate(email.current.value,password.current.value,name.current.value);
@@ -38,10 +48,13 @@ const Login = () => {
             
 =======
             const user = userCredential.user;
+<<<<<<< HEAD
             
             navigate("/browser");
             console.log(user);
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+>>>>>>> 9ade620 (Completed the browse page)
 
           })
           .catch((error) => {
@@ -57,10 +70,14 @@ const Login = () => {
              updateProfile(user, {
               displayName: name.current.value,
 <<<<<<< HEAD
+<<<<<<< HEAD
               photoURL: USER_LOGO,
 =======
               photoURL: "https://avatars.githubusercontent.com/u/12824231?v=4",
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+              photoURL: USER_LOGO,
+>>>>>>> 9ade620 (Completed the browse page)
              })
               .then(() => {
                 const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -73,9 +90,12 @@ const Login = () => {
                   })
                 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 navigate("/browser");
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+>>>>>>> 9ade620 (Completed the browse page)
               })
               .catch((error) => {
                 setIsErrorMsg(error.message);

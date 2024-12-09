@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import Login from './Login'
 import { createBrowserRouter} from 'react-router-dom'
@@ -8,24 +9,27 @@ import{RouterProvider} from "react-router-dom"
 const Body = () => {
 =======
 import React, { useEffect } from 'react'
+=======
+import React from 'react'
+>>>>>>> 9ade620 (Completed the browse page)
 import Login from './Login'
 import { createBrowserRouter} from 'react-router-dom'
-import Browser from './Browser'
+import Browse from './Browse'
 import{RouterProvider} from "react-router-dom"
-import {auth} from "../utils/firebase"
-import { onAuthStateChanged } from "firebase/auth";
-import { useDispatch } from 'react-redux'
-import {addUser,removeUser} from "../utils/userSlice"
 
 const Body = () => {
+<<<<<<< HEAD
   const dispatch = useDispatch();
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+>>>>>>> 9ade620 (Completed the browse page)
   const appRouter=createBrowserRouter([
     {
         path:"/",
         element:<Login/>,
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
         path:"/browse",
         element:<Browse/>
@@ -55,6 +59,13 @@ const Body = () => {
     });
   }, []);
 >>>>>>> e7f9588 (firebase integration and signin & signout added)
+=======
+        path:"/browse",
+        element:<Browse/>
+    }
+  ]);
+  
+>>>>>>> 9ade620 (Completed the browse page)
 
   return (
     <div>
