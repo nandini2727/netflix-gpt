@@ -4,19 +4,25 @@ import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import usePopularMovies from '../hooks/usePopularMovies';
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 
 const Browser = () => {
   useNowPlayingMovies();
   usePopularMovies();
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const randomInteger = Math.floor(Math.random() * 4);
-
-   console.log("Random integer:", randomInteger);
   return (
     <>
          <Header/>
-         <MainContainer randomInteger={randomInteger}/>
-         <SecondaryContainer/>
-         {console.log("called")}
+         {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer randomInteger={randomInteger}/>
+          <SecondaryContainer />
+        </>
+      )}
     </>
   )
 }
