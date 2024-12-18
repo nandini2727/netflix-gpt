@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 >>>>>>> 9ade620 (Completed the browse page)
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
+import Loading from "../components/Loading";
 const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
   const getMovieVideos = async () => {
@@ -16,12 +17,14 @@ const useMovieTrailer = (movieId) => {
       API_OPTIONS
     );
     const json = await data.json();
-    const filterData = json.results.filter((video) => video.type === "Trailer");
+    const filterData = json?.results.filter((video) => video.type === "Trailer");
     const trailer = filterData.length ? filterData[0] : json.results[0];
     dispatch(addTrailerVideo(trailer));
   };
   useEffect(() => {
-    getMovieVideos();
+      getMovieVideos();
+   
+    
   }, []);
 };
 export default useMovieTrailer;

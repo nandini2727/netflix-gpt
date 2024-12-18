@@ -33,7 +33,7 @@ const Body = () => {
 <<<<<<< HEAD
         path:"/browse",
         element:<Browse/>
-    }
+    },
   ]);
   
 =======
