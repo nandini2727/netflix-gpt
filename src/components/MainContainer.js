@@ -8,11 +8,7 @@ const MainContainer = ({randomInteger}) => {
   const mainMovie = movies[randomInteger];
   const { original_title, overview, id } = mainMovie;
   return (
-<<<<<<< HEAD
     <div  className="pt-[30%] bg-black md:pt-0">
-=======
-    <div>
->>>>>>> 9ade620 (Completed the browse page)
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={id} />
     </div>

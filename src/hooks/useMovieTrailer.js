@@ -1,9 +1,5 @@
 import { useEffect } from "react";
-<<<<<<< HEAD
-import { useDispatch} from "react-redux";
-=======
 import { useDispatch } from "react-redux";
->>>>>>> 9ade620 (Completed the browse page)
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
 import Loading from "../components/Loading";

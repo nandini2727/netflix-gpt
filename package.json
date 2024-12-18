@@ -8,13 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.9",
     "firebase": "^11.0.2",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "openai": "^4.76.0",
-=======
->>>>>>> e7f9588 (firebase integration and signin & signout added)
-=======
->>>>>>> fa00bf1 (Read Me File Added)
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",

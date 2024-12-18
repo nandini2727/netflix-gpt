@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useDispatch, useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
 import { useRef, useState } from "react";
@@ -49,26 +48,7 @@ const handleSearchClick = async () => {
           className=" p-4 ml-4 md:m-4  text-[0.9rem] md:text-lg col-span-9 bg-black border text-white"
           placeholder={lang[langKey].gptSearchPlaceholder}
         />
-<<<<<<< HEAD
-        <button className="col-span-3 m-4 py-2 px-4 bg-red-700 text-white rounded-lg" onClick={searchMovieTMDB}>
-=======
-import { useSelector } from "react-redux";
-import lang from "../utils/languageConstants";
-const GptSearchBar = () => {
-  const langKey = useSelector((store) => store.config.lang);
-  return (
-    <div className="pt-[10%] flex justify-center">
-      <form className=" w-1/2 bg-black grid grid-cols-12">
-        <input
-          type="text"
-          className=" p-4 m-4 col-span-9"
-          placeholder={lang[langKey].gptSearchPlaceholder}
-        />
-        <button className="col-span-3 m-4 py-2 px-4 bg-red-700 text-white rounded-lg">
->>>>>>> 97c48da (Added GPT search page & language change functionality)
-=======
         <button className="col-span-3 mx-4 my-2 md:m-4  px-2 md:px-4 bg-red-700 hover:bg-red-800 text-white rounded-lg font-medium text-lg md:text-xl" onClick={handleSearchClick}>
->>>>>>> fa00bf1 (Read Me File Added)
           {lang[langKey].search}
         </button>
       </form>

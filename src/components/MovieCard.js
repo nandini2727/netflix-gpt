@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { IMG_CDN_URL } from "../utils/constants";
-const MovieCard = ({ posterPath }) => {
-<<<<<<< HEAD
-  if (!posterPath) return null
-  return (
-    <div className="w-36 md:w-48 mr-4">
-      <img alt="Movie Card" src={IMG_CDN_URL + posterPath} className=" border rounded-lg h-60" />
-=======
-  return (
-    <div className="w-48 pr-4">
-      <img alt="Movie Card" src={IMG_CDN_URL + posterPath} />
->>>>>>> 9ade620 (Completed the browse page)
-=======
 import { Link } from "react-router-dom";
 import { API_OPTIONS, IMG_CDN_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
@@ -33,7 +19,6 @@ const MovieCard = ({ posterPath ,id }) => {
   return (
     <div className="w-36 md:w-48  mr-4">
       <Link to={"https://www.youtube.com/watch?v="+ trailerid} target="_blank" ><img alt="Movie Card" src={IMG_CDN_URL + posterPath} className=" hover:scale-110 transform transition duration-30000 cursor-pointer border rounded-lg h-52 md:h-60" /></Link>
->>>>>>> fa00bf1 (Read Me File Added)
     </div>
   );
 };
