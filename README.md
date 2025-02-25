@@ -58,9 +58,6 @@ Follow these steps to run Netflix GPT on your local machine:
 2. Hit the "Search" button.
 3. Netflix GPT will use GPT’s language model to analyze your input and provide a list of movie recommendations that match your request.
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to the project, feel free to fork the repository and submit a pull request. You can also open an issue to suggest features or report bugs.
 
 ## To-Do
 
@@ -85,5 +82,5 @@ Contributions are welcome! If you'd like to contribute to the project, feel free
 
 ---
 
-Feel free to explore, contribute, and share Netflix GPT. Enjoy personalized movie recommendations at your fingertips!
+Feel free to explore and share Netflix GPT. Enjoy personalized movie recommendations at your fingertips!
 
