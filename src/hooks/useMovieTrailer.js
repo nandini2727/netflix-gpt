@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
-import Loading from "../components/Loading";
 const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
   const getMovieVideos = async () => {

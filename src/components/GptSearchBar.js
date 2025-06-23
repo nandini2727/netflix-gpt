@@ -7,7 +7,7 @@ import aiSearch from "../utils/aiSearch";
 import searchMovieTMDB from "../utils/searchMovieTMDB";
 
 
-const GptSearchBar = ({}) => {
+const GptSearchBar = () => {
   const [load,setLoad]=useState(false);
   const [aiBool,setAiBool]=useState(false);
   const langKey = useSelector((store) => store.config.lang);

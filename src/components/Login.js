@@ -66,7 +66,7 @@ const Login = () => {
             const errorCode = error.code;
             if(errorCode==="auth/network-request-failed")
               setIsErrorMsg("Connection failed. Try Again Later")
-            else if(errorCode=="auth/email-already-in-use")
+            else if(errorCode==="auth/email-already-in-use")
               setIsErrorMsg("Email ID already exists. Try signing in")
             else
               setIsErrorMsg(errorCode);

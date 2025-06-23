@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {  useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO_URL, SUPPORTED_LANGUAGES } from '../utils/constants';
+import { LOGO_URL,LOGO_URL1, SUPPORTED_LANGUAGES } from '../utils/constants';
 import { toggleSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 import { IoSearch } from "react-icons/io5";
@@ -57,7 +57,7 @@ const Header = () => {
   return (
     <>
     <div className="absolute h-[15vh] md:h-auto w-screen md:px-8 py-2 bg-gradient-to-b from-black z-10 flex  flex-row justify-between">
-      <img className=" w-36 h-16 md:h-auto md:w-44 my-2 mx-4 md:mx-0" src={LOGO_URL} alt="logo" />
+      <img className=" w-36 h-10 md:h-auto md:w-48 my-4 mx-4 md:mx-0" src={LOGO_URL1} alt="logo" />
       {user && (
          <div className="flex p-2 justify-evenly h-[10vh]">
           {showSearch && (
@@ -90,7 +90,7 @@ const Header = () => {
     {isOpen&&
      <div className='absolute z-10 right-2 top-20 bg-gray-800  border-gray-600 rounded-md'>
       <p className='font-normal py-2 px-3 text-white'>{user?.displayName}</p>
-      <button onClick={ handleSignOut} className="  font-normal py-1 px-3 border-t text-gray-400 hover:text-white ">
+      <button onClick={ handleSignOut} className=" text-center w-full font-normal py-1 px-3 border-t text-gray-400 hover:text-white ">
      Sign Out
     </button>
       </div>}
